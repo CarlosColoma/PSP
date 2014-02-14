@@ -7,13 +7,16 @@ package pjsonpsp;
  *
  * @author usuario
  */
-//he etado realizando pruebas para conseguir la forma más optima o sencilla.
+//añadido import de google y impresión del array.
 
+import com.google.gson.Gson;
 import java.util.*;
+
 
 public class Alumno {
     
     public static void main(String[] args){
+        Gson gson = new Gson();
         Scanner scaner = new Scanner(System.in);
         
         String array[] = new String[6];
@@ -25,9 +28,9 @@ public class Alumno {
             rest--;
             System.out.println("Quedan: "+rest+" Alumnos por introducir.");
         }
+        //Imprime el array
         
-        
-        
+        gson.toJson(array);
         
     }
     
